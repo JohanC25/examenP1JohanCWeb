@@ -1,0 +1,41 @@
+// Definición de variables
+$font-poppins: "Poppins", sans-serif;
+$font-montserrat: "Montserrat", sans-serif;
+
+$font-size-lg: 18px;
+$font-size-71xl: 90px;
+$font-size-5xl: 24px;
+$font-size-21xl: 40px;
+$font-size-13xl: 32px;
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-3xl: 22px;
+
+$color-white: #fff;
+$color-black: #000;
+$color-burlywood-100: #dbb671;
+$color-burlywood-200: rgba(219, 182, 113, 0.75);
+$color-dimgray: #696969;
+
+$br-3xs: 10px;
+$br-9xs: 4px;
+$br-5xs: 8px;
+
+@mixin font-settings($size, $font-family: $font-poppins) {
+  font-size: $size;
+  font-family: $font-family;
+  line-height: normal;
+}
+
+
+// Estilos globales
+body {
+  margin: 0;
+  @include font-settings($font-size-base);
+}
+
+.example-class {
+  color: $color-dimgray;
+  @include font-settings($font-size-lg, $font-montserrat);
+  border-radius: $br-3xs;
+}
